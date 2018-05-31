@@ -1,0 +1,17 @@
+{
+  "name": "avanzado",
+  "version": "1.0.0",
+  "description": "segundo json",
+  "main": "index.js",
+  "dependencies": {
+    "json": "^9.0.6",
+    "bootstrap": "^4.1.1",
+    "servidor": "node_modules/.bin/live-server"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
