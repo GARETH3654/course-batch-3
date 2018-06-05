@@ -1,0 +1,180 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Untitled Document.md</title><style></style></head><body id="preview">
+<p>notas de primera y segunda clase</p>
+<p>Reglas de Oro<br>
+1.-git pull upstream master<br>
+2.- trabajar en local<br>
+3.-git add . o file/directory<br>
+4.-git commit -m “”<br>
+5.-git pull upstream master *solo si no hay merge<br>
+6.-<br>
+6.1 git push origin<br>
+6.2 pull request<br>
+7 resolver conflictos manuales (bugs)</p>
+<p>Sistemas de tageo<br>
+x.y.z<br>
+x= cambios publicos - son cambios que se modifican y se cashean con el original<br>
+y=new featuring - son cambios pero sin afectar el diseño principal<br>
+z=solucion de errores - son cambios por dentro del sistema, como mejorar el rendimiento y/o optimizar la pagina</p>
+<p><a href="http://CHANGEDLOG.md">CHANGEDLOG.md</a><br>
+es importante poner la actualizacion (5.0.3) y poner las caracteristicas de las actualizaciones</p>
+<p>dia 2<br>
+Github<br>
+Github es una plataforma virtual la cual nos ayuda a guardar nuestro codigo creado desde un local y este crea un repositorio y ahí es donde se guarda nuestro codigo<br>
+algunos comandos para git son estos :<br>
+<code>git remote -v</code> =&gt; Indica los remotes sincronizados en local<br>
+<code>git remote add &lt;remote_alias&gt; &lt;ssh/https url&gt;</code> =&gt; Agrega un remote a nuestro local<br>
+<code>git pull &lt;remote&gt; &lt;branch&gt;</code><br>
+<code>git remote remove &lt;remote_alias&gt;</code><br>
+<code>git branch &lt;branch_name&gt;</code> =&gt; Crea una rama<br>
+<code>git checkout &lt;branch_name&gt;</code> =&gt; Cambiar a la rama branch_name<br>
+<code>git checkout -b &lt;branch_name&gt;</code> =&gt; Crea una rama y nos cambia a ella<br>
+<code>git branch -d &lt;branch_name&gt;</code> =&gt; Borra la rama (No debemos estar en ella)<br>
+<code>git branch -D &lt;branch_name&gt;</code> =&gt; Borra la rama aunque tenga commits o cambios pendientes.<br>
+<code>git merge &lt;branch_name&gt;</code> fusiona las branches (la que estamos posicionados) con la branch_name<br>
+<code>ssh-keygen</code> =&gt; para generar ssh keys<br>
+<code>pbcopy &lt; ~/.ssh/id_rsa.pub</code> =&gt; Copia la llave pública</p>
+<p>dia 3 del curso<br>
+ECMAscrip6<br>
+con anterioridad se usaba:<br>
+var boo= ‘’;<br>
+pero ahora existen dos nuevos tipos de variables que son: (estan son las que usaremos en este curso)<br>
+const boo=’’;<br>
+let boo= ‘’;</p>
+<p>antes para trabajar funciones tenias que llamar una funcion<br>
+function hello() {<br>
+//@todo<br>
+};</p>
+<p>ECMascrip (estandar) 6<br>
+javascript (lenguaje) 2015</p>
+<p>ahora una funcion funcionaria con<br>
+const hello= ( name=’’) =&gt;{<br>
+//@todo<br>
+}<br>
+con ECMAscrip6 podemos inicializar un parametro en la declaracion de la funcion</p>
+<p>// es6<br>
+if<br>
+if else</p>
+<p>switch<br>
+vamos a usarlo envez de usar ifelse si hay mas de dos condicionales<br>
+switch(option){<br>
+case: 1<br>
+break;<br>
+case: 2<br>
+break;<br>
+case: 3<br>
+break;<br>
+case: 4<br>
+break;<br>
+default:<br>
+}<br>
+condition ? true : false;</p>
+<p>ciclos<br>
+for(var i = 0; i &lt; array.length; i++){<br>
+array[i]<br>
+}<br>
+lo nuevo de los ciclos:<br>
+for(const index in array){<br>
+console.log(index); //0,1,2<br>
+}<br>
+el sig. es<br>
+for(const iterable of array){<br>
+console.log(iterable); // 1,2,3<br>
+}<br>
+for of- lista de arreglos<br>
+for in - optimizado para la familia de los objetos</p>
+<p>for in .Los for in son propiedades enumerables(se pueden contabilizar los indices y/o propiedades de un array), es normal usar de for-in es usado para esculpir las propiedades de un objeto</p>
+<p>for each pertenece exclusivamente a la familia real de los array el metodo for each se introdujo en el linaje de de la herencia del ArrayObject<br>
+for of crea un ciclo interativo con los arreglos iterables</p>
+<p>array.map - map usa una funcion anonima como parametro para saber que es lo que vas a hacer.</p>
+<p>ejemplo:<br>
+const newArray = users.map((user) =&gt;{<br>
+return{<br>
+fullName: <code>${user.lastName}, ${user.name}</code>(esto es nuevo en ECMAstrict 6 “string templates”)<br>
+};<br>
+});</p>
+<p>const user =[{<br>
+name: ‘alfonso’<br>
+lasteName ‘Ríos’<br>
+}];</p>
+<p>clase lunes 29 de mayo 2018<br>
+type off es una palabra rservada de js que nos permite devolver el tipo de dato de la variable</p>
+<h1><a id="null_117"></a>null-</h1>
+<p>no es una variable global como undefined, es un objeto es algo peculiar<br>
+NaN-- not at number<br>
+math.sqrt (-1) te va a dovolver un Nan porque no va a ser un numero, es una de las primeras cosas de js, Nan es considerado un numero válido<br>
+isNaN nos podra evaluar en un true o false si los anteriores no se pueden usar</p>
+<h1><a id="ARRAYS_123"></a>ARRAYS</h1>
+<p>se puede declarar de las sig maneras [],new Array.<br>
+la forma en que se puede acceder a esta posicion es atravez de la posicion<br>
+como saber que es un array<br>
+array.isArray(fruits); //true</p>
+<h1><a id="SET_129"></a>SET</h1>
+<p>no permite valores duplicados, es util para cuando alguien quiere representar conjuntos, los parametros tienen que ser iterables(string,array), NaN y undefined tambien pueden ser almacenados en un set</p>
+<h1><a id="Map_131"></a>Map</h1>
+<p>almacena clave/valor, es como una libreria</p>
+<p>lo siguient es hacer un scope(es como un cuarto y dentro de ese cuarto existiera una caja fuerte y no la pudieras abrir y todo lo que esta en la caja no esta en el cuarto listo para tomarlo)<br>
+const a = () =&gt;<br>
+let boo =&quot;;<br>
+};</p>
+<h1><a id="30_de_mayo_de_2018_138"></a>30 de mayo de 2018</h1>
+<h2><a id="Manegador_de_Dependencia_139"></a>Manegador de Dependencia</h2>
+<p>es aquela plataforma que nos permite tener pertenencias dentro de nuestro documento,<br>
+– caracteristicas:<br>
+nos da una descripcion visual de como va a quedar el codigo.<br>
+al momento de desgargar bower y npm o yart estas desacargaran todas las dependencias que necesite.</p>
+<h3><a id="Bower_144"></a>Bower</h3>
+<p>todas las dependencias eran de bower hasta polimer 3 y pasa a npm o yart.</p>
+<h1><a id="Clase_del_dia_31_de_mayo_del_2018_146"></a>Clase del dia 31 de mayo del 2018</h1>
+<h3><a id="npm_148"></a>npm</h3>
+<p>es recomendable hacer npm init(para tener todas los nodes.modules) y npn instal(para descargar el json)</p>
+<ul>
+<li>npm intsall &lt;package_name&gt; -<br>
+– se intala pero no le decimos que es dependiente.<br>
+– busca en el registry el paquete, y si lo encuentra lo instala y lo guarda en el package.json</li>
+<li>npm install --save &lt;package_name&gt;<br>
+– guarda el package.json como dependency en el modulo</li>
+<li>npm install --save-dev jest<br>
+– se guarda en el package json</li>
+</ul>
+<h3><a id="Yarn_158"></a>Yarn</h3>
+<p>yarn utiliza el registrer de npm y este funciona offline, tiene rendimineto de la red y genera hilos paralelos de las dependencias. en teoria es mas sencillo.</p>
+<h3><a id="Hoisting_161"></a>Hoisting</h3>
+<p>lo que hace es cuando una funcion es funcional housting compila la funcion y lo guarda en memoria y despues pasa a la ejecucion y esta como ya esta guardada el la memoria se ejecuta libremente<br>
+boo ();<br>
+function boo(){<br>
+--------------------<br>
+--------------------<br>
+--------------------<br>
+}</p>
+<h1><a id="Clase_numero_10_de_4jun2018_169"></a>Clase numero 10 de 4/jun/2018</h1>
+<h2><a id="objetos_de_simulacion_170"></a>objetos de simulacion</h2>
+<ul>
+<li>mock: cuando queremos simular un modulo completo<br>
+– { user: new UserMock()}</li>
+<li>dummy: cuando queremos comparar con algo esperado<br>
+– { user ‘malforime’}</li>
+<li>spy: ve el comportamiento de la funcion<br>
+– ¿se llamó, cuantas veces se llamó, con que parametros se llamo?</li>
+<li>stub: remplaza funciones. Cuando existe una conexión externa que está acoplado a nuestra funcion</li>
+</ul>
+<p>cuando en una libreria vemos it o test significa que es un codigo de prueba</p>
+<h3><a id="estrucutras_de_pruebas_unitarias_181"></a>estrucutras de pruebas unitarias</h3>
+<p>suite(’’, {<br>
+before() {<br>
+Inicializar stub.<br>
+}<br>
+after() {<br>
+Destruir stub<br>
+}</p>
+<pre><code>test() {
+    before() {
+        Inicializar dummy.
+    }
+    after() {
+        Destruir dummy.
+    }
+    // Assertions o expects
+}
+</code></pre>
+<p>});</p>
+</body></html>
